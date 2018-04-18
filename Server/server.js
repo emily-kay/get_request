@@ -1,4 +1,5 @@
 const express = require('express'); //translated: go to the node module folder, find express and run the code
+const quotes = require('./all-quotes.js');
 
 const app = express(); //the thing that was exported from express above, now run it
 const PORT = 5000; //all caps cause it won't change
@@ -9,6 +10,9 @@ const PORT = 5000; //all caps cause it won't change
 
 app.use(express.static('server/public')); //express.static() is a method, express looks to what files we want it to run, in this case it's the public folder
 
+app.get('/all-quotes', (req, res) =>{
+    res.send(quotes);
+})
 
 app.listen(PORT, function () {
     console.log(`listening on port: ${PORT}`)
