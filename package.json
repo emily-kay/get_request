@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/emily-kay/get_request#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "jquery": "^3.3.1"
   }
 }
