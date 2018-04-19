@@ -16,6 +16,15 @@ h1 {
 }
 
 p {
-    text-align: center
+    text-align: center;
+}
+
+div {
+    font-size: 40pt;
+}
+
+input {
+    align-content: center;
+    block-size: auto;
 }
 

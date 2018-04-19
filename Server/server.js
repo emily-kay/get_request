@@ -1,6 +1,7 @@
 //Always necessary consts
 
 const express = require('express'); //translated: go to the node module folder, find express and run the code
+const bodyParser = require('body-parser');
 const app = express(); //the thing that was exported from express above, now run it
 const PORT = 5000; //all caps cause it won't change
 
@@ -8,7 +9,7 @@ const PORT = 5000; //all caps cause it won't change
 
 const quotes_data = require('./modules/all-quotes.js');
 app.use(express.static('server/public'));
-
+app.use(bodyParser.urlencoded({extended: true}));
 
 //Make the server do stuff
 
@@ -28,6 +29,12 @@ app.use(express.static('server/public')); //express.static() is a method, expres
 app.get('/all-quotes', (req, res) =>{
     res.send(quotes_data);
 })
+
+app.post('/add-quote', (req, res) =>{
+    console.log(req.body); //whatever we send back as data in our post is req.body on the server*********
+    quotes_data.push(req.body);
+    res.sendStatus(200);
+});
 
 app.listen(PORT, () => {
     console.log(`listening on port: ${PORT}`)
