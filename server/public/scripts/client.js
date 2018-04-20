@@ -25,6 +25,7 @@ function addNew(){
         author: $('#newAuthor').val(),
     }//end newQuote
     $('input').val('');
+    $('textarea').val('');
     $.ajax({
         method: 'POST',
         url: '/add-quote',

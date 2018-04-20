@@ -1,7 +1,7 @@
 body {
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(219, 152, 194);
-    color: rgb(255, 255, 255);
+    background-color: rgb(84, 185, 231);
+    color: black;
     
 }
 
@@ -13,6 +13,7 @@ button {
 h1 {
     text-align: center;
     text-shadow: 2px 2px rgba(245, 245, 245, 0.904);
+    font-size: 140pt;
 }
 
 p {
@@ -21,10 +22,21 @@ p {
 
 div {
     font-size: 40pt;
+    text-align: center;
 }
 
-input {
-    align-content: center;
-    block-size: auto;
+textarea {
+    width: 40em;
+    height: 4em;
 }
 
+.buttonSize{
+    height:70px;
+    width:120px;
+    display: inline-block;
+}
+
+center {
+    width:100%;
+    text-align: center;
+}

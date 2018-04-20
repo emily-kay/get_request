@@ -3,7 +3,7 @@
 const express = require('express'); //translated: go to the node module folder, find express and run the code
 const bodyParser = require('body-parser');
 const app = express(); //the thing that was exported from express above, now run it
-const PORT = 5000; //all caps cause it won't change
+const PORT = process.env.PORT || 5000; //the first one is for deployment on Heroku, all caps cause it won't change
 
 //Created consts
 
